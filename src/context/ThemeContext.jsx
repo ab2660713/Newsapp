@@ -5,7 +5,7 @@ const ThemeContext=createContext()
 export const ThemeProvider=({children})=>{
    
    const initialState={
-    dark:false
+    dark:JSON.parse(localStorage.getItem('theme'))||false
    }
    //Theme channge
    const ThemeReducer=(state,action)=>{
